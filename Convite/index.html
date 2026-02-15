@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family:'Segoe UI', Tahoma, Geneva,Verdana, sans-serif;
+        }
+         .convite{
+            background-color: #0f0f1e;
+            border: 2px solid #d4af37;
+            outline: 1px solid #d4af37;
+            outline-offset: -15px;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+         }
+         .convite::before, .convite::after,.detalhes::before,.detalhes::after{
+            content: "⚜";
+            position:absolute;
+            color:#d4af37;
+            font-size: 20px;
+         }
+         .convite::before{
+            top: 20px; left: 20px;
+         }
+         .convite::after{
+            top: 20px; right: 20px;
+         }
+         .detalhes::before{
+            bottom: 20px; left: 20px;
+         }
+         .detalhes::after{
+            bottom: 20px; right: 20px;
+         }
+         h1{
+            font-family: 'Playfair Display', serif;
+            color: #eee;
+            font-size: 18px;
+            margin-bottom: 10px;
+         }
+         .nome-destaque{
+            font-family: 'Great Vibes', cursive;
+            font-size: 80px;
+            display: block;
+            color: #d4af37;
+            line-height: 1;
+            margin: 10px 0;
+         }
+          button{
+                background-color: #d4af47;
+                color: #1a1a2e;
+                padding: 12px 25px;
+                border: 1px solid #ffffff;
+                border-radius: 8px;
+                font-weight: bold;
+                width: 100%;
+                cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+            box-shadow:0px 4px 15px rgba(212,175,55,0.4)
+          }
+          button:hover{
+            background-color: #f1c40f;
+            transform: scale(1.05);
+          }
+           label{
+            color: #d4af37;
+            font-weight: bold;
+            margin-right: 5px;
+          }
+          .detalhes-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.3); 
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px 0;
+          }
+          .detalhes-grid{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+            border-top: 1px solid rgba(212,175,55,0.3);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            margin: 20px 0;
+            padding: 20px 0;
+          }
+          @media(max-width:480){
+            .convite{
+                width: 90px;
+                padding: 30px 15px;
+                outline-offset: -10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .nome-destaque{
+                font-size: 50px;
+            }
+            .detalhes-grid{
+                gap:15px
+            }
+          }
+    </style>
+</head>
+<body>
+    <div class="convite">
+     <h1>Aniversario da <span class = "nome-destaque">Nami</span></h1>
+     <p>Venha comemorar comigo!</p>
+    <div class="detalhes-grid">
+        <p> <span class = "label"> Data:</span> 14 de maio </p>
+        <p> <span class = "label"> Hora: </span> 20:00 </p>
+    </div>
+        <p> <span class = "label" > Local: </span> Minha Casa</p>
+        <button id="btn-confirmar">Confirmar Presença</button> 
+        <br>
+         <button id="btn-mapa">Ver Localização</button>
+    </div> </div>
+<script>
+    const btnconfirmar = document.getElementById('btn-confirmar')
+    const btnmapa = document.getElementById('btn-mapa')
+    btnconfirmar.addEventListener('click',function(){
+      window.open('https://wa.me/5585985508464?text=Olá%2C%20Confirmo%20sim%2Ca%20minha%20presença', '_blank')
+    })
+    btnmapa .addEventListener('click', function(){
+        window.open('https://maps.app.goo.gl/2tMRv5dcuqVTKv986', '_blank')
+      })
+</script>
+</body>
+</html>
